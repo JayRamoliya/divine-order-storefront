@@ -30,38 +30,31 @@ const About = () => (
   <div className="min-h-screen flex flex-col">
     <Header />
     <main className="flex-1 w-full">
-      <div className="py-12 max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-yellow-700 mb-4">About Us</h2>
-        {/* Mission */}
-        <section className="mb-7">
-          <div className="text-lg font-semibold text-orange-700 mb-1">Mission:</div>
-          <div className="italic text-xl text-orange-900">
-            "Spiritual purity to every home"
-          </div>
+      <div className="py-8 md:py-12 max-w-4xl mx-auto px-2 md:px-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">About Us</h2>
+        <section className="mb-5 md:mb-7">
+          <div className="text-base md:text-lg font-semibold text-secondary mb-1">Mission:</div>
+          <div className="italic text-lg md:text-xl text-accent">"Spiritual purity to every home"</div>
         </section>
-
-        {/* Meet the Pandits / Founders */}
-        <section className="mb-10">
-          <h3 className="text-xl font-bold text-yellow-800 mb-3">Meet the Pandits / Founders</h3>
-          <div className="flex flex-col sm:flex-row gap-5">
+        <section className="mb-7 md:mb-10">
+          <h3 className="text-lg md:text-xl font-bold text-primary mb-3">Meet the Pandits / Founders</h3>
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-5">
             {PANDITS.map((p) => (
               <div
                 key={p.name}
-                className="flex-1 bg-white border border-orange-100 rounded-xl px-5 py-4 flex flex-col items-center text-center shadow-sm"
+                className="flex-1 bg-card border border-primary/20 rounded-xl px-4 md:px-5 py-3 md:py-4 flex flex-col items-center text-center shadow-sm"
               >
-                <img src={p.photo} alt={p.name} className="w-16 h-16 rounded-full mb-2 border border-yellow-300" />
-                <div className="font-bold text-orange-900">{p.name}</div>
-                <div className="text-xs text-orange-700 mb-1">{p.title}, {p.city}</div>
-                <div className="text-sm text-gray-600">{p.bio}</div>
+                <img src={p.photo} alt={p.name} className="w-14 h-14 md:w-16 md:h-16 rounded-full mb-2 border border-yellow-300" />
+                <div className="font-bold text-accent">{p.name}</div>
+                <div className="text-xs text-secondary mb-1">{p.title}, {p.city}</div>
+                <div className="text-sm text-muted-foreground">{p.bio}</div>
               </div>
             ))}
           </div>
         </section>
-
-        {/* Why Our Products are 100% Genuine */}
-        <section className="mb-10">
-          <h3 className="text-xl font-bold text-yellow-800 mb-3">Why Our Products are 100% Genuine</h3>
-          <ul className="list-disc ml-6 space-y-2 text-gray-700 text-base">
+        <section className="mb-7 md:mb-10">
+          <h3 className="text-lg md:text-xl font-bold text-primary mb-3">Why Our Products are 100% Genuine</h3>
+          <ul className="list-disc ml-5 md:ml-6 space-y-2 text-muted-foreground text-base">
             <li>Direct sourcing from trusted, traditional suppliers and temples.</li>
             <li>All items are verified for authenticity before sale.</li>
             <li>Each energized kit is blessed by our partner Pandits with Vedic rituals.</li>
@@ -69,15 +62,11 @@ const About = () => (
             <li>No artificial coloring or misleading claims—100% spiritual purity.</li>
           </ul>
         </section>
-
-        {/* Temple Partnerships */}
-        <section className="mb-12">
-          <h3 className="text-xl font-bold text-yellow-800 mb-3">Temple Partnerships</h3>
-          <div className="rounded-xl border border-dashed border-orange-200 p-5 text-center text-gray-500">
-            {/* Replace this with actual temple partners/logos when available */}
-            Trusted temples and spiritual trusts partner with us to energize select products. 
-            <br />
-            <span className="text-xs text-orange-400">[Temple partnership details coming soon...]</span>
+        <section className="mb-10 md:mb-12">
+          <h3 className="text-lg md:text-xl font-bold text-primary mb-3">Temple Partnerships</h3>
+          <div className="rounded-xl border border-dashed border-primary/20 p-4 md:p-5 text-center text-muted-foreground">
+            Trusted temples and spiritual trusts partner with us to energize select products. <br />
+            <span className="text-xs text-accent/70">[Temple partnership details coming soon...]</span>
           </div>
         </section>
       </div>

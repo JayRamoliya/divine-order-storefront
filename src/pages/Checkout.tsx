@@ -4,18 +4,23 @@ import Footer from "../components/Footer";
 const Checkout = () => (
   <div className="min-h-screen flex flex-col">
     <Header />
-    <main className="py-12 max-w-lg mx-auto flex flex-col items-center flex-1 w-full">
-      <h2 className="text-3xl font-bold text-yellow-700 mb-7">Checkout</h2>
-      <div className="w-full bg-white rounded-xl shadow-md p-8 border flex flex-col items-center">
-        <p className="text-xl font-medium text-green-800 mb-6 text-center">
+    <main className="py-8 md:py-12 max-w-lg mx-auto flex flex-col items-center flex-1 w-full px-2 md:px-0">
+      <h2 className="text-2xl md:text-3xl font-bold text-primary mb-5 md:mb-7">Checkout</h2>
+      <div className="w-full bg-card rounded-xl shadow-md p-5 md:p-8 border border-primary/20 flex flex-col items-center">
+        <p className="text-base md:text-xl font-medium text-secondary mb-5 md:mb-6 text-center">
           WhatsApp-Based Ordering Only
         </p>
         <a
           href={`https://wa.me/919999999999?text=${encodeURIComponent("Hello, I want to order:\n- Product: [Product Name]\n- Quantity: [1 / 2 / 3]\n- Name:\n- Address:\n- Pincode:\n- Preferred Delivery Date (if any):\n- Gift Wrap? [Yes/No]\n- Payment Method: COD / UPI / Paytm")}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="sticky bottom-7 w-full bg-green-600 hover:bg-green-700 text-white font-bold text-lg py-4 rounded-xl transition flex items-center justify-center gap-2"
-          style={{ boxShadow: "0 4px 16px 0 rgba(24,112,42,0.12)" }}
+          className="sticky bottom-7 w-full font-bold text-lg py-3 md:py-4 rounded-xl transition flex items-center justify-center gap-2"
+          style={{
+            background: "linear-gradient(45deg,var(--cta-gradient-start),var(--cta-gradient-end))",
+            color: "var(--cta-gradient-text)",
+            border: "none",
+            boxShadow: "0 4px 16px 0 rgba(244,163,0,0.12)"
+          }}
         >
           <svg className="w-6 h-6" fill="none" viewBox="0 0 40 40">
             <circle cx="20" cy="20" r="20" fill="#25d366" />
@@ -23,9 +28,9 @@ const Checkout = () => (
           </svg>
           Order Now on WhatsApp
         </a>
-        <p className="mt-8 text-sm text-gray-600">
+        <p className="mt-7 md:mt-8 text-sm text-foreground text-center">
           You’ll be redirected to WhatsApp with a pre-filled message. Our team will confirm details and ship your order.<br/>
-          <span className="block text-gray-400 mt-2">COD & Online Payment Available.</span>
+          <span className="block text-muted-foreground mt-2">COD & Online Payment Available.</span>
         </p>
       </div>
     </main>

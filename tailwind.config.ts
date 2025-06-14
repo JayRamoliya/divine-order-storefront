@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -64,8 +63,9 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				ctaGold: {
-					DEFAULT: '#FFD700',
-					end: '#FFC300',
+					DEFAULT: 'var(--cta-gradient-start)',
+					end: 'var(--cta-gradient-end)',
+					text: 'var(--cta-gradient-text)',
 				}
 			},
 			borderRadius: {

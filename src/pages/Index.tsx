@@ -14,20 +14,20 @@ const Index = () => {
       <Header />
       <main className="flex-1">
         <HeroBanner />
-        <section className="max-w-7xl mx-auto mt-8 px-4">
+        <section className="max-w-7xl mx-auto mt-6 md:mt-8 px-2 md:px-4">
           <PopularCategories />
         </section>
         {/* ComboOffers section removed */}
-        <section className="max-w-7xl mx-auto mt-12 px-4">
+        <section className="max-w-7xl mx-auto mt-10 md:mt-12 px-2 md:px-4">
           <PanditCarousel />
         </section>
-        <section className="max-w-7xl mx-auto mt-12 px-4">
+        <section className="max-w-7xl mx-auto mt-10 md:mt-12 px-2 md:px-4">
           <WhatsappCTA />
         </section>
-        <section className="max-w-7xl mx-auto mt-16 px-4">
+        <section className="max-w-7xl mx-auto mt-12 md:mt-16 px-2 md:px-4">
           <ReviewsTestimonials />
         </section>
-        <section className="max-w-4xl mx-auto mt-12 mb-24 px-4">
+        <section className="max-w-4xl mx-auto mt-10 md:mt-12 mb-16 md:mb-24 px-2 md:px-4">
           <DeliveryInfo />
         </section>
       </main>

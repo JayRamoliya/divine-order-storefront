@@ -34,25 +34,25 @@ const Blog = () => (
   <div className="min-h-screen flex flex-col">
     <Header />
     <main className="flex-1 w-full">
-      <div className="py-12 max-w-5xl mx-auto px-4">
-        <h1 className="text-3xl md:text-4xl font-bold text-yellow-700 mb-4">
+      <div className="py-8 md:py-12 max-w-5xl mx-auto px-2 md:px-4">
+        <h1 className="text-2xl md:text-3xl font-bold text-primary mb-4">
           Learn &amp; Read (Blogs)
         </h1>
-        <p className="mb-10 text-gray-700">
+        <p className="mb-8 md:mb-10 text-foreground">
           Guides, tips, and info from our experts and temple Pandits to help you on your spiritual journey.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {BLOGS.map((blog) => (
             <Card
               key={blog.title}
-              className="transition-transform hover:scale-105 border-orange-200 shadow-md"
+              className="transition-transform hover:scale-105 border-primary/20 shadow-md"
             >
-              <CardContent className="p-6">
-                <CardTitle className="mb-2 text-xl text-orange-900">{blog.title}</CardTitle>
-                <div className="mb-4 text-gray-700">{blog.excerpt}</div>
+              <CardContent className="p-4 md:p-6">
+                <CardTitle className="mb-2 text-base md:text-xl text-accent">{blog.title}</CardTitle>
+                <div className="mb-4 text-foreground">{blog.excerpt}</div>
                 <a
                   href={blog.slug}
-                  className="text-orange-700 font-semibold underline hover:text-orange-900 text-sm"
+                  className="text-accent font-semibold underline hover:text-primary text-sm"
                 >
                   Read More
                 </a>

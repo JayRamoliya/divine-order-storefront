@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
@@ -40,9 +39,9 @@ const Shop = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="py-12 max-w-7xl mx-auto px-4 flex-1 w-full">
-        <h2 className="text-3xl font-bold text-yellow-700 mb-4">Shop Products</h2>
-        <p className="mb-8 text-gray-700">
+      <main className="py-8 md:py-12 max-w-7xl mx-auto px-2 md:px-4 flex-1 w-full">
+        <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">Shop Products</h2>
+        <p className="mb-6 md:mb-8 text-foreground">
           Browse by category, filter by price, size/material, temple energized, and more.
         </p>
         <ProductFilters filters={filters} setFilters={setFilters} />
