@@ -6,54 +6,58 @@
 /* Divine Store Theme Colors - Light & Dark Mode */
 @layer base {
   :root {
-    /* LIGHT MODE COLORS */
-    --background: 222 40% 98%;             /* New Lighter background - Soft Gray */
-    --foreground: 222 33% 15%;             /* New Foreground - Dark Navy */
-    --primary: 230 100% 62%;               /* #5478FF - New Primary Blue */
-    --primary-foreground: 0 0% 100%;       /* White */
-    --secondary: 144 29% 55%;              /* #74C69D - Green */
-    --secondary-foreground: 0 0% 100%;     /* White */
-    --accent: 20 95% 54%;                  /* #FF854A - Vibrant Orange */
-    --accent-foreground: 0 0% 100%;        /* White */
-    --muted: 216 15% 92%;                  /* #ECEFF4 - Muted Gray */
-    --muted-foreground: 222 33% 28%;
-    --destructive: 0 78% 62%;
-    --destructive-foreground: 0 0% 100%;
-    --card: 222 40% 98%;
-    --card-foreground: 222 33% 15%;
-    --popover: 222 40% 98%;
-    --popover-foreground: 222 33% 15%;
-    --border: 222 18% 90%;
-    --input: 222 18% 90%;
-    --ring: 230 100% 62%;
-    --radius: 0.5rem;
+    /* LIGHT MODE COLORS (muted, but always overwritten by dark below) */
+    --background: 245 23% 9%;
+    --foreground: 230 50% 98%;
+    --primary: 235 100% 72%;
+    --primary-foreground: 230 36% 13%;
+    --secondary: 197 69% 61%;
+    --secondary-foreground: 230 50% 98%;
+    --accent: 333 92% 55%;       /* Vibrant magenta for pop */
+    --accent-foreground: 230 50% 98%;
+    --muted: 240 17% 20%;
+    --muted-foreground: 230 40% 85%;
+    --destructive: 355 85% 51%;
+    --destructive-foreground: 230 50% 98%;
+    --card: 244 26% 16%;
+    --card-foreground: 230 50% 98%;
+    --popover: 244 26% 16%;
+    --popover-foreground: 230 50% 98%;
+    --border: 240 16% 30%;
+    --input: 240 12% 23%;
+    --ring: 291 76% 59%;
+    --radius: 0.65rem;
 
-    --cta-gradient-start: #61a0ff;   /* Gradient Blue */
-    --cta-gradient-end: #2a72ef;     /* Deep Blue */
-    --cta-gradient-text: #FF854A;    /* Vibrant Orange */
+    --cta-gradient-start: #3214b9;   /* Deep indigo blue */
+    --cta-gradient-end: #8717e8;     /* Electric purple */
+    --cta-gradient-text: #e882fc;    /* Neon lavender */
   }
   .dark {
-    /* DARK MODE COLORS */
-    --background: 230 36% 13%;             /* Deep navy background */
-    --foreground: 230 50% 98%;             /* Light text */
-    --primary: 197 97% 68%;                /* #48CAE4 - Light Blue */
-    --primary-foreground: 230 36% 13%;     /* Navy */
-    --secondary: 166 25% 42%;              /* #4db38a - Green */
-    --secondary-foreground: 230 50% 98%;   /* Light text */
-    --accent: 20 95% 54%;                  /* #FF854A - Vibrant Orange */
-    --accent-foreground: 230 50% 98%;      /* Light text */
-    --muted: 230 20% 22%;
-    --muted-foreground: 230 50% 98%;
-    --card: 230 24% 15%;
-    --card-foreground: 230 50% 98%;
-    --popover: 230 24% 15%;
-    --popover-foreground: 230 50% 98%;
-    --border: 230 16% 25%;
-    --input: 230 16% 25%;
-    --ring: 197 97% 68%;
-    --cta-gradient-start: #498ddb;   /* Dim Blue */
-    --cta-gradient-end: #315185;     /* Darker Blue */
-    --cta-gradient-text: #FADB4D;    /* Soft Gold */
+    /* DARK MODE COLORS - "WOW" style */
+    --background: 247 42% 10%;           /* Rich navy-black */
+    --foreground: 230 60% 96%;           /* Almost white for max contrast */
+    --primary: 266 98% 63%;              /* Electric purple */
+    --primary-foreground: 247 42% 10%;   /* For strong contrast on primaries */
+    --secondary: 200 94% 41%;            /* Cyan blue */
+    --secondary-foreground: 230 60% 96%;
+    --accent: 24 100% 59%;               /* Vibrant orange */
+    --accent-foreground: 230 60% 96%;
+    --muted: 247 28% 22%;
+    --muted-foreground: 230 40% 85%;
+    --destructive: 345 95% 60%;          /* Neon red-pink */
+    --destructive-foreground: 230 60% 96%;
+    --card: 248 26% 16%;
+    --card-foreground: 230 60% 96%;
+    --popover: 247 30% 15%;
+    --popover-foreground: 230 60% 96%;
+    --border: 249 20% 24%;
+    --input: 245 13% 17%;
+    --ring: 180 100% 50%;                /* Neon teal ring */
+    --radius: 0.65rem;
+
+    --cta-gradient-start: #3214b9;   /* Deep indigo blue */
+    --cta-gradient-end: #8717e8;     /* Electric purple */
+    --cta-gradient-text: #ffd161;    /* Yellow orange highlight */
   }
 }
 
@@ -66,3 +70,14 @@
   }
 }
 
+/* Force dark mode for entire site */
+html:not(.dark) {
+  color-scheme: dark;
+}
+html {
+  color-scheme: dark;
+  background: hsl(var(--background));
+}
+body {
+  background: hsl(var(--background));
+}
