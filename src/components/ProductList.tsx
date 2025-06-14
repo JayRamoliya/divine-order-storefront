@@ -109,11 +109,11 @@ const ProductList: React.FC<ProductListProps> = ({ filters, onProductClick }) =>
               </Badge>
             )}
           </div>
-          <div className="font-bold text-lg mt-2 mb-1 text-orange-900">{prod.name}</div>
+          <div className="font-bold text-lg mt-2 mb-1 text-accent">{prod.name}</div>
           <div className="text-sm text-gray-700 mb-2">{prod.desc}</div>
           <div className="mt-auto flex flex-col gap-2">
             <div className="flex gap-2 items-center">
-              <span className="font-bold text-lg text-green-700">
+              <span className="font-bold text-lg text-secondary">
                 ₹{(prod.price * (1 - prod.discount/100)).toFixed(0)}
               </span>
               {prod.discount > 0 && (
@@ -126,7 +126,13 @@ const ProductList: React.FC<ProductListProps> = ({ filters, onProductClick }) =>
                 href={`https://wa.me/919999999999?text=${encodeURIComponent(`Hello, I want to order:\n- Product: ${prod.name}\n- Quantity: 1\n- Name:\n- Address:\n- Pincode:\n- Preferred Delivery Date (if any):\n- Gift Wrap? [Yes/No]\n- Payment Method: COD / UPI / Paytm`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-2 rounded-lg text-center transition"
+                className="flex-1 font-bold py-2 rounded-lg text-center transition text-gray-900"
+                style={{ 
+                  background: "linear-gradient(45deg,#FFD700,#FFC300)", 
+                  color: "#861919", 
+                  border: "none",
+                  boxShadow: "0 2px 12px 0 rgba(244,163,0,0.08)"
+                }}
                 onClick={e => e.stopPropagation()}
               >
                 Order on WhatsApp
