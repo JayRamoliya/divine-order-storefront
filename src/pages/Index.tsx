@@ -20,13 +20,13 @@ const Index = () => {
           <div className="bg-white/80 rounded-2xl flex flex-col md:flex-row items-center gap-8 p-7 shadow">
             <img
               src="https://img.icons8.com/color/120/lotus.png"
-              alt="Divine Store"
+              alt="Satvik Store"
               className="w-24 h-24 md:w-32 md:h-32 object-contain mb-4 md:mb-0"
             />
             <div>
-              <h3 className="text-2xl font-extrabold text-yellow-700 mb-2">About Divine Store</h3>
+              <h3 className="text-2xl font-extrabold text-yellow-700 mb-2">About Satvik Store</h3>
               <p className="text-gray-700 text-base md:text-lg">
-                Divine Store is your authentic destination for original Rudraksha, energised Pooja Kits, Mandirs, and pure Samagri—shipped directly to your home, verified by temple priests. We bring timeless tradition to your doorstep with trusted support from expert Pandits and 10,000+ happy families across India.
+                Satvik Store is your authentic destination for original Rudraksha, energised Pooja Kits, Mandirs, and pure Samagri—shipped directly to your home, verified by temple priests. We bring timeless tradition to your doorstep with trusted support from expert Pandits and 10,000+ happy families across India.
               </p>
             </div>
           </div>

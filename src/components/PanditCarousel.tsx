@@ -6,7 +6,7 @@ const PANDITS = [
     name: "Pandit R.K. Sharma",
     city: "Varanasi",
     photo: "https://img.icons8.com/color/96/hindu-priest.png",
-    quote: "I recommend Divine Store for 100% original Rudraksha and fast Pooja delivery to my clients.",
+    quote: "I recommend Satvik Store for 100% original Rudraksha and fast Pooja delivery to my clients.",
   },
   {
     name: "Pandit Nidhi Mishra",
@@ -18,7 +18,7 @@ const PANDITS = [
     name: "Pandit Om Prakash",
     city: "Nashik",
     photo: "https://img.icons8.com/color/96/yogi.png",
-    quote: "Divine Store delivers what they promise — pure Samagri and prompt support.",
+    quote: "Satvik Store delivers what they promise — pure Samagri and prompt support.",
   },
 ];
 
@@ -59,7 +59,7 @@ const PanditCarousel = () => (
         size="lg"
       >
         <a
-          href="https://wa.me/919999999999?text=I%20want%20to%20book%20a%20pandit%20from%20Divine%20Store"
+          href="https://wa.me/919999999999?text=I%20want%20to%20book%20a%20pandit%20from%20Satvik%20Store"
           target="_blank"
           rel="noopener noreferrer"
         >

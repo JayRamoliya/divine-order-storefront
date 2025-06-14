@@ -20,7 +20,7 @@ function MobileNav({
         <Dialog.Content className="fixed left-0 right-0 top-0 z-50 bg-background border-b rounded-b-xl shadow p-4 pt-8 flex flex-col gap-5">
           <div className="flex items-center gap-3 mb-2">
             <img src="https://img.icons8.com/color/52/om.png" alt="Om" width={36} height={36} className="w-8 h-8" />
-            <h1 className="text-lg font-extrabold text-primary tracking-tight">Divine Store</h1>
+            <h1 className="text-lg font-extrabold text-primary tracking-tight">Satvik Store</h1>
           </div>
           <nav className="flex flex-col gap-2 text-lg">
             <Link to="/" className={currentPath === "/" ? "font-bold text-primary" : ""} onClick={() => onOpenChange(false)}>
@@ -67,9 +67,8 @@ const Header = () => {
       <div className="flex items-center gap-3 md:gap-4">
         {/* Om logo added here for desktop header */}
         <img src="https://img.icons8.com/color/52/om.png" alt="Om" width={38} height={38} className="w-8 h-8 md:w-10 md:h-10" />
-        <span className="text-2xl hidden md:inline-block" style={{marginRight:"4px"}} role="img" aria-label="Om">&#x1F549;️</span>
         <h1 className="text-lg md:text-xl font-extrabold text-primary tracking-tight">
-          Divine Store
+          Satvik Store
         </h1>
       </div>
       {/* Desktop Nav */}
@@ -83,7 +82,7 @@ const Header = () => {
       {/* CTA + dark mode toggle desktop */}
       <div className="hidden md:flex items-center space-x-2">
         <a
-          href="https://wa.me/919999999999"
+          href="https://wa.me/916353716421"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-gradient-to-r from-ctaGold via-yellow-400 to-ctaGold.end text-ctaGold.text font-bold rounded-full py-2 px-4 md:px-6 shadow transition"

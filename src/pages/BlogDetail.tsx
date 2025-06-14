@@ -50,7 +50,7 @@ const BLOGS = [
       <ol class="list-decimal pl-6">
         <li>Clean the items with Gangajal or clean water.</li>
         <li>Create a peaceful environment: light a diya, incense, and chant mantras (e.g., Gayatri Mantra, Om chants).</li>
-        <li>Pray sincerely, inviting divine blessings on each item.</li>
+        <li>Pray sincerely, inviting Satvik blessings on each item.</li>
       </ol>
       <p>Consult a priest for special rituals if needed.</p>
     `,

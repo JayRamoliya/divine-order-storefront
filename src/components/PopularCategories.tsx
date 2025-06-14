@@ -3,13 +3,13 @@ const DATA = [
   {
     name: "Rudraksha",
     desc: "Premium Himalayan beads, single & multi mukhi.",
-    img: "https://img.icons8.com/color/96/rudraksha-mala.png",
+    img: "Rudraksha logo.png",
     to: "/shop?category=rudraksha",
   },
   {
     name: "Pooja Kits",
     desc: "All-in-one kits for daily & festival needs.",
-    img: "https://img.icons8.com/color/96/aarti-thali.png",
+    img: "aarti-thali.png",
     to: "/shop?category=kits",
   },
   {

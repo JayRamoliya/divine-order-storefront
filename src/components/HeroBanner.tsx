@@ -5,12 +5,12 @@ const categories = [
   {
     name: "Rudraksha",
     link: "/shop?category=rudraksha",
-    img: "https://img.icons8.com/color/48/rudraksha-mala.png",
+    img: "/Rudraksha logo.png",
   },
   {
     name: "Pooja Kits",
     link: "/shop?category=kits",
-    img: "https://img.icons8.com/color/48/aarti-thali.png",
+    img: "aarti-thali.png",
   },
   {
     name: "Samagri",

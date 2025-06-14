@@ -1,0 +1,98 @@
+const PRODUCTS = [
+  {
+    id: "1",
+    name: "Nepali Rudraksha Bead",
+    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=600&q=80",
+    desc: "Original Panchmukhi Rudraksha bead, sourced from Nepal and energized with ancient Vedic rituals.",
+    category: "rudraksha",
+    size: "medium",
+    energized: true,
+    price: 999,
+    discount: 20,
+    benefits: [
+      "Brings peace of mind and spiritual clarity.",
+      "Helps in meditation and focus.",
+      "Said to ward off negative energy and improve health.",
+    ],
+    uses: [
+      "Daily Pooja",
+      "Meditation",
+      "Festivals",
+      "Vastu Correction",
+      "Spiritual Gifting",
+    ],
+  },
+  {
+    id: "2",
+    name: "Copper Diyas (Set of 2)",
+    image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=400&q=80",
+    desc: "Handmade pure copper diyas for daily pooja.",
+    category: "diya",
+    size: "small",
+    energized: false,
+    price: 299,
+    discount: 10,
+    benefits: [
+      "Enhances the spiritual atmosphere with warm light.",
+      "Copper is believed to have purifying properties.",
+      "Ideal for daily rituals and festive occasions.",
+    ],
+    uses: [
+      "Lighting during Aarti",
+      "Festival Decor",
+      "Spiritual Gifting",
+      "Temple Use",
+      "Home Mandir Setup",
+    ],
+  },
+  {
+    id: "3",
+    name: "Mini Wooden Mandir",
+    image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=400&q=80",
+    desc: "Premium small wooden mandir, perfect for home/office.",
+    category: "mandir",
+    size: "small",
+    energized: true,
+    price: 2499,
+    discount: 18,
+    benefits: [
+      "Creates a dedicated spiritual space at home.",
+      "Compact yet elegant design suitable for small spaces.",
+      "Adds traditional charm to modern interiors.",
+    ],
+    uses: [
+      "Daily Worship",
+      "Home Temple Setup",
+      "Office Pooja Space",
+      "Festive Decoration",
+      "Spiritual Gifting",
+    ],
+  },
+  {
+    id: "4",
+    name: "Daily Pooja Samagri Kit",
+    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=400&q=80",
+    desc: "Complete kit for all everyday poojas, includes 15+ items.",
+    category: "samagri",
+    size: "",
+    energized: false,
+    price: 599,
+    discount: 8,
+    benefits: [
+      "Saves time gathering essential pooja items.",
+      "Ensures all rituals are done with proper materials.",
+      "Great for beginners and regular practitioners alike.",
+    ],
+    uses: [
+      "Daily Pooja",
+      "Festival Preparations",
+      "New Home Pooja",
+      "Housewarming Gifts",
+      "Vastu Pooja",
+    ],
+  },
+];
+
+
+
+export default PRODUCTS;

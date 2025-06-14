@@ -36,7 +36,7 @@ const About = () => (
           <div className="text-base md:text-lg font-semibold text-secondary mb-1">Mission:</div>
           <div className="italic text-lg md:text-xl text-accent">"Spiritual purity to every home"</div>
         </section>
-        <section className="mb-7 md:mb-10">
+        {/* <section className="mb-7 md:mb-10">
           <h3 className="text-lg md:text-xl font-bold text-primary mb-3">Meet the Pandits / Founders</h3>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-5">
             {PANDITS.map((p) => (
@@ -51,7 +51,7 @@ const About = () => (
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
         <section className="mb-7 md:mb-10">
           <h3 className="text-lg md:text-xl font-bold text-primary mb-3">Why Our Products are 100% Genuine</h3>
           <ul className="list-disc ml-5 md:ml-6 space-y-2 text-muted-foreground text-base">
@@ -61,13 +61,6 @@ const About = () => (
             <li>Transparent process: what you see is exactly what you receive.</li>
             <li>No artificial coloring or misleading claims—100% spiritual purity.</li>
           </ul>
-        </section>
-        <section className="mb-10 md:mb-12">
-          <h3 className="text-lg md:text-xl font-bold text-primary mb-3">Temple Partnerships</h3>
-          <div className="rounded-xl border border-dashed border-primary/20 p-4 md:p-5 text-center text-muted-foreground">
-            Trusted temples and spiritual trusts partner with us to energize select products. <br />
-            <span className="text-xs text-accent/70">[Temple partnership details coming soon...]</span>
-          </div>
         </section>
       </div>
     </main>
