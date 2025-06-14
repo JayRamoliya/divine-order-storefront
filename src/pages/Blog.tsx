@@ -1,32 +1,34 @@
+
 import React from "react";
 import { Card, CardTitle, CardContent } from "@/components/ui/card";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const BLOGS = [
   {
     title: "How to Identify Original Rudraksha",
     excerpt:
       "Discover expert tips to authenticate genuine Rudraksha beads and avoid imitations for your spiritual practices.",
-    slug: "#rudraksha-original",
+    slug: "rudraksha-original",
   },
   {
     title: "Daily Pooja Samagri List",
     excerpt:
       "A handy checklist of essential Pooja Samagri to keep your daily rituals pure and complete at home.",
-    slug: "#pooja-samagri-list",
+    slug: "pooja-samagri-list",
   },
   {
     title: "How to Energize Pooja Items at Home",
     excerpt:
       "Simple steps to perform Pran Pratishtha and energize your Pooja items using traditional Vedic rituals.",
-    slug: "#energize-pooja-items",
+    slug: "energize-pooja-items",
   },
   {
     title: "Vastu Tips for Mandir Setup",
     excerpt:
       "Follow these Vastu guidelines to create a spiritually uplifting Mandir space in your home.",
-    slug: "#vastu-mandir-setup",
+    slug: "vastu-mandir-setup",
   },
 ];
 
@@ -50,12 +52,12 @@ const Blog = () => (
               <CardContent className="p-4 md:p-6">
                 <CardTitle className="mb-2 text-base md:text-xl text-accent">{blog.title}</CardTitle>
                 <div className="mb-4 text-foreground">{blog.excerpt}</div>
-                <a
-                  href={blog.slug}
+                <Link
+                  to={`/blog/${blog.slug}`}
                   className="text-accent font-semibold underline hover:text-primary text-sm"
                 >
                   Read More
-                </a>
+                </Link>
               </CardContent>
             </Card>
           ))}
