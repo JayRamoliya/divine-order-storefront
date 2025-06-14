@@ -1,7 +1,7 @@
+
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 
-// Placeholder products
 const PRODUCTS = [
   {
     id: "1",
@@ -59,18 +59,17 @@ export interface ProductFilters {
 
 interface ProductListProps {
   filters: ProductFilters;
+  onProductClick?: (id: string) => void;
 }
 
-const ProductList: React.FC<ProductListProps> = ({ filters }) => {
+const ProductList: React.FC<ProductListProps> = ({ filters, onProductClick }) => {
   const filtered = PRODUCTS.filter(product => {
     const {
       category, minPrice, maxPrice, size, energized
     } = filters;
 
     let match = true;
-    // Only skip category filter if value is "all"
     if (category && category !== "all" && product.category !== category) match = false;
-    // Only skip size filter if value is "all"
     if (size && size !== "all" && product.size !== size) match = false;
     if (energized && !product.energized) match = false;
     if (minPrice && product.price < parseInt(minPrice)) match = false;
@@ -85,7 +84,13 @@ const ProductList: React.FC<ProductListProps> = ({ filters }) => {
         <div className="col-span-full text-center text-gray-400 text-xl py-16">No products found.</div>
       )}
       {filtered.map(prod => (
-        <div key={prod.id} className="rounded-2xl border shadow-sm p-5 bg-white flex flex-col">
+        <div
+          key={prod.id}
+          className={`rounded-2xl border shadow-sm p-5 bg-white flex flex-col cursor-pointer transition hover:shadow-lg`}
+          onClick={() => onProductClick && onProductClick(prod.id)}
+          tabIndex={onProductClick ? 0 : undefined}
+          role={onProductClick ? "button" : undefined}
+        >
           <div className="relative">
             <img 
               src={prod.image}
@@ -115,12 +120,14 @@ const ProductList: React.FC<ProductListProps> = ({ filters }) => {
                 <span className="line-through text-gray-400 text-sm">₹{prod.price}</span>
               )}
             </div>
+            {/* WhatsApp Order button retained; Add to Cart removed */}
             <div className="flex gap-2 w-full">
               <a
                 href={`https://wa.me/919999999999?text=${encodeURIComponent(`Hello, I want to order:\n- Product: ${prod.name}\n- Quantity: 1\n- Name:\n- Address:\n- Pincode:\n- Preferred Delivery Date (if any):\n- Gift Wrap? [Yes/No]\n- Payment Method: COD / UPI / Paytm`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-2 rounded-lg text-center transition"
+                onClick={e => e.stopPropagation()}
               >
                 Order on WhatsApp
               </a>
