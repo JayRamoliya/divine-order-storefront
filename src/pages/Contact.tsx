@@ -1,5 +1,7 @@
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Map from "../components/Map";
 
 const Contact = () => (
   <div className="min-h-screen flex flex-col">
@@ -38,8 +40,16 @@ const Contact = () => (
           <span className="text-xs text-muted-foreground">Available 9am – 9pm</span>
         </div>
       </form>
-      <div className="mt-6 md:mt-8 rounded-xl border border-dashed border-primary/20 p-4 md:p-5 text-center text-muted-foreground">
-        Google Maps / pickup info coming soon...
+      {/* Map and pickup info below the form */}
+      <div className="mt-6 md:mt-8">
+        <h3 className="text-lg font-bold text-primary flex items-center gap-2 mb-2">
+          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18.7a7 7 0 1 1 6 0l-3 3zm1-6.7a2 2 0 1 0 4 0a2 2 0 0 0-4 0Z" /></svg>
+          </span>
+          Pickup Location
+        </h3>
+        <Map />
+        <div className="text-muted-foreground text-sm mt-2 text-center">Pickup &amp; warehouse info coming soon...</div>
       </div>
     </main>
     <Footer />
