@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 
@@ -125,13 +124,6 @@ const ProductList: React.FC<ProductListProps> = ({ filters }) => {
               >
                 Order on WhatsApp
               </a>
-              <button
-                className="bg-yellow-200 hover:bg-yellow-300 text-orange-900 font-semibold px-4 py-2 rounded-lg transition"
-                // placeholder for onClick: add to cart
-                onClick={() => alert('Added to cart! (Demo)')}
-              >
-                Add to Cart
-              </button>
             </div>
           </div>
         </div>
