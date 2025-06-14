@@ -69,8 +69,10 @@ const ProductList: React.FC<ProductListProps> = ({ filters }) => {
     } = filters;
 
     let match = true;
-    if (category && product.category !== category) match = false;
-    if (size && product.size !== size) match = false;
+    // Only skip category filter if value is "all"
+    if (category && category !== "all" && product.category !== category) match = false;
+    // Only skip size filter if value is "all"
+    if (size && size !== "all" && product.size !== size) match = false;
     if (energized && !product.energized) match = false;
     if (minPrice && product.price < parseInt(minPrice)) match = false;
     if (maxPrice && product.price > parseInt(maxPrice)) match = false;

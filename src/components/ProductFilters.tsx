@@ -5,14 +5,14 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 
 const CATEGORIES = [
-  { label: "All", value: "" },
+  { label: "All", value: "all" }, // was ""
   { label: "Rudraksha", value: "rudraksha" },
   { label: "Diya", value: "diya" },
   { label: "Mandir", value: "mandir" },
   { label: "Samagri", value: "samagri" },
 ];
 const SIZES = [
-  { label: "All", value: "" },
+  { label: "All", value: "all" }, // was ""
   { label: "Small", value: "small" },
   { label: "Medium", value: "medium" },
   { label: "Large", value: "large" },

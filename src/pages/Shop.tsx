@@ -5,10 +5,10 @@ import ProductList from "../components/ProductList";
 
 const Shop = () => {
   const [filters, setFilters] = useState({
-    category: "",
+    category: "all",         // was ""
     minPrice: "",
     maxPrice: "",
-    size: "",
+    size: "all",             // was ""
     energized: false,
   });
 
