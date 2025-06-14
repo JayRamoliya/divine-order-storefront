@@ -189,7 +189,13 @@ const ProductDetail = () => {
             >
               <div className="flex items-center gap-2 mb-2 text-yellow-500">
                 {Array.from({ length: rev.stars }).map((_, idx) => (
-                  <Star key={idx} filled="true" size={18} className="inline" />
+                  <Star
+                    key={idx}
+                    size={18}
+                    className="inline"
+                    fill="#FACC15"
+                    color="#FACC15"
+                  />
                 ))}
                 <span className="text-sm text-yellow-800 font-bold ml-2">
                   {rev.name} ({rev.city})
@@ -205,4 +211,3 @@ const ProductDetail = () => {
 };
 
 export default ProductDetail;
-
