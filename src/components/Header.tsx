@@ -70,7 +70,9 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-30 bg-background/95 shadow border-b flex items-center justify-between px-2 md:px-8 h-16 md:h-20">
       <div className="flex items-center gap-3 md:gap-4">
+        {/* Om logo added here for desktop header */}
         <img src="https://img.icons8.com/color/52/om.png" alt="Om" width={38} height={38} className="w-8 h-8 md:w-10 md:h-10" />
+        <span className="text-2xl hidden md:inline-block" style={{marginRight:"4px"}} role="img" aria-label="Om">&#x1F549;️</span>
         <h1 className="text-lg md:text-xl font-extrabold text-primary tracking-tight">
           Divine Store
         </h1>
@@ -116,4 +118,3 @@ const Header = () => {
 };
 
 export default Header;
-

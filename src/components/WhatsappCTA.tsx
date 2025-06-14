@@ -2,23 +2,31 @@
 const whatsappNumber = "919999999999"; // Set your WhatsApp number here
 
 const WhatsappCTA = ({ small = false }: { small?: boolean }) => (
-  <a
-    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hello, I want to order...")}`}
-    target="_blank"
-    rel="noopener noreferrer"
-    className={`flex items-center justify-center rounded-full shadow font-bold transition px-6 
-      ${small 
-        ? "bg-green-500 hover:bg-green-600 text-white py-2 text-sm" 
-        : "bg-green-600 text-white text-lg py-4 hover:bg-green-700"}
-    `}
-    style={{ minWidth: small ? 0 : 320 }}
-  >
-    <svg className={`mr-2 ${small ? "w-5 h-5" : "w-7 h-7"}`} fill="none" viewBox="0 0 40 40">
-      <circle cx="20" cy="20" r="20" fill="#25d366" />
-      <path fill="#fff" d="M31 30.063A13.09 13.09 0 1 0 9.205 16.493L7 33l17.031-2.143A12.921 12.921 0 0 0 31 30.063Zm-11-1.6a11.09 11.09 0 1 1 0-22.18 11.09 11.09 0 0 1 0 22.18ZM15.583 13.502a1.175 1.175 0 0 0-.93-.55c-.234 0-.465.074-.67.215-.8.54-1.78 1.263-1.53 2.78.315 1.942 2.53 5.252 5.55 7.042.32.194.773.236 1.18.133.52-.134.8-.55 1.12-.97l.09-.126c.123-.17.254-.35.41-.449.18-.11.273-.085.386-.06.434.1 2.102.888 2.468 1.012.083.027.163.04.24.04.148 0 .288-.055.42-.164.25-.217.594-.487.368-.947-.2-.398-1.092-1.267-1.224-1.396s-.238-.184-.379-.136c-.127.042-.215.21-.305.297-.088.086-.157.155-.274.132-.657-.14-1.732-.609-3.143-2.154-.964-1.049-1.314-1.85-1.114-2.268.052-.11.168-.17.287-.19.842-.134 1.29-.805 1.267-1.19-.015-.234-.106-.394-.37-.605Z"/>
-    </svg>
-    {small ? "WhatsApp Order" : "Order via WhatsApp in Your Language"}
-  </a>
+  <div className={`flex justify-center w-full ${small ? "" : "mt-3"}`}>
+    <a
+      href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hello, I want to order...")}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`
+        flex items-center justify-center rounded-full shadow font-bold transition
+        ${small 
+          ? "bg-green-500 hover:bg-green-600 text-white py-2 px-6 text-sm w-full sm:w-auto" 
+          : "bg-green-600 text-white text-lg py-4 px-8 hover:bg-green-700 w-full max-w-xl"
+        }
+        `}
+      style={{
+        minWidth: small ? 0 : undefined,
+        width: small ? "auto" : "100%",
+        maxWidth: small ? "100%" : 480,
+      }}
+    >
+      <svg className={`mr-2 ${small ? "w-5 h-5" : "w-7 h-7"}`} fill="none" viewBox="0 0 40 40">
+        <circle cx="20" cy="20" r="20" fill="#25d366" />
+        <path fill="#fff" d="M31 30.063A13.09 13.09 0 1 0 9.205 16.493L7 33l17.031-2.143A12.921 12.921 0 0 0 31 30.063Zm-11-1.6a11.09 11.09 0 1 1 0-22.18 11.09 11.09 0 0 1 0 22.18ZM15.583 13.502a1.175 1.175 0 0 0-.93-.55c-.234 0-.465.074-.67.215-.8.54-1.78 1.263-1.53 2.78.315 1.942 2.53 5.252 5.55 7.042.32.194.773.236 1.18.133.52-.134.8-.55 1.12-.97l.09-.126c.123-.17.254-.35.41-.449.18-.11.273-.085.386-.06.434.1 2.102.888 2.468 1.012.083.027.163.04.24.04.148 0 .288-.055.42-.164.25-.217.594-.487.368-.947-.2-.398-1.092-1.267-1.224-1.396s-.238-.184-.379-.136c-.127.042-.215.21-.305.297-.088.086-.157.155-.274.132-.657-.14-1.732-.609-3.143-2.154-.964-1.049-1.314-1.85-1.114-2.268.052-.11.168-.17.287-.19.842-.134 1.29-.805 1.267-1.19-.015-.234-.106-.394-.37-.605Z"/>
+      </svg>
+      {small ? "WhatsApp Order" : "Order via WhatsApp in Your Language"}
+    </a>
+  </div>
 );
 
 export default WhatsappCTA;
