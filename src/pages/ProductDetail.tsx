@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -7,7 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Star, Video, Check, Cart } from "lucide-react";
+import { Star, Video, Check, Car } from "lucide-react";
 
 const PRODUCT = {
   id: "1",
@@ -123,7 +124,7 @@ const ProductDetail = () => {
               className="flex-1"
             >
               <Button className="w-full bg-green-600 hover:bg-green-700 text-white font-bold flex gap-2 items-center text-base py-3 text-center">
-                <Cart size={20} /> Order on WhatsApp
+                <Car size={20} /> Order on WhatsApp
               </Button>
             </a>
             <Button
@@ -131,7 +132,7 @@ const ProductDetail = () => {
               className="flex-1 text-orange-900 font-semibold flex gap-2 items-center py-3 text-base"
               onClick={() => alert("Added to cart! (Demo)")}
             >
-              <Cart size={20} /> Add to Cart
+              <Car size={20} /> Add to Cart
             </Button>
           </div>
         </div>
@@ -210,3 +211,4 @@ const ProductDetail = () => {
 };
 
 export default ProductDetail;
+
