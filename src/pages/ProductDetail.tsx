@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -8,7 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Star, Cart, Video, Check } from "lucide-react";
+import { Star, Video, Check, Cart } from "lucide-react";
 
 const PRODUCT = {
   id: "1",
