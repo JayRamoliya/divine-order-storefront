@@ -1,8 +1,6 @@
-
 import { Link, useLocation } from "react-router-dom";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Menu } from "lucide-react";
-import DarkModeToggle from "./DarkModeToggle";
 import React from "react";
 
 // MobileNav: Hidden by default, slides in when open, overlays content
@@ -54,9 +52,6 @@ function MobileNav({
           >
             WhatsApp Order
           </a>
-          <div className="flex justify-end">
-            <DarkModeToggle />
-          </div>
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
@@ -99,7 +94,6 @@ const Header = () => {
         >
           WhatsApp Order
         </a>
-        <DarkModeToggle />
       </div>
       {/* Mobile Hamburger + Drawer */}
       <div className="flex md:hidden items-center">
@@ -110,7 +104,6 @@ const Header = () => {
         >
           <Menu className="w-7 h-7 text-primary" />
         </button>
-        <DarkModeToggle />
         <MobileNav open={menuOpen} onOpenChange={setMenuOpen} currentPath={location.pathname} />
       </div>
     </header>
